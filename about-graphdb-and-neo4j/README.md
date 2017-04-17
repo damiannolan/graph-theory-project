@@ -1,6 +1,6 @@
 # What are Graph Databases and Neo4j?
 
-Graph databases are databases which use graph structures for storing and collating data to represent meaningful information for a given data set.
+Graph databases are databases which use graph structures for storing and collating data to represent meaningful information for a given data set. A Graph database is a database management system with CRUD (Create, Read, Update and Delete) operations working on a graph data model.
 
 In Graph databases vertices are referred to as nodes and perhaps the most key concept for storing data is how edges between vertices or nodes are known as relationships. Relationships depicted via edges directly relate data items within the store and can be uses for traversal of a node tree within a database.
 
