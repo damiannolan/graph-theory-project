@@ -14,6 +14,16 @@ The purpose of this project is to learn about Neo4j and Graph Databases along wi
 
 In light of this we take a look at how one might approach modeling a Third Level Institute timetabling system such as that of GMIT's. GMIT is home to a large number of programmes which fall under a wide variety of different departments. For this project, the BSc. in Software Development course will be showcased in the prototype database hosted in this repository.
 
+- [What are Graph Databases and Neo4j?](about-graphdb-and-neo4j)
+- How is data stored?
+- GMIT Timetable 
+- General Thoughts and Conclusion
+
 ### Prerequisites 
 
-Before moving any further it is advised you are setup and ready to use [Neo4j](https://neo4j.com/download/)
+Before moving any further it is advised you are setup and ready to use Neo4j with the prototype database provided. 
+
+- Simply download and install [Neo4j](https://neo4j.com/download/)
+- Clone this repository
+- Unzip the file - gmit-software-timetable-graphdb.zip
+- Launch Neo4j, select the database location and click start
