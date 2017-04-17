@@ -15,7 +15,7 @@ The purpose of this project is to learn about Neo4j and Graph Databases along wi
 In light of this we take a look at how one might approach modeling a Third Level Institute timetabling system such as that of GMIT's. GMIT is home to a large number of programmes which fall under a wide variety of different departments. For this project, the BSc. in Software Development course will be showcased in the prototype database hosted in this repository.
 
 - [What are Graph Databases and Neo4j?](about-graphdb-and-neo4j)
-- [How is data stored?](how-data-is-stored)
+- [How is Data Stored?](how-data-is-stored)
 - GMIT Timetable 
 - General Thoughts and Conclusion
 
