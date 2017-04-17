@@ -25,3 +25,5 @@ Properties are expressed within curly braces
 Together we can build a simple enough Cypher Query
 
     $ match (x:User { name: 'John Doe'})-[:FOLLOWS]->(y:User { name: 'Jane Doe'}) return x, y;
+
+The direction of the relationship above is that John follows Jane, it is not to be assumed that Jane follows John.
