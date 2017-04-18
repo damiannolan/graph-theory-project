@@ -12,10 +12,11 @@ Create a node with the label of Lab:
 
 Associate the Lab with it's respective Module, Room and Time on a particular Day using Relationships:
 
-    $ match (m:Module {module: 'GRAPH THEORY'}), (l:Lab {lab: 'Graph Theory', group: 'B'}), (r:Room {room:'379'}), (d:Day {day: 'Tuesday'})
+    $ match (m:Module {module: 'GRAPH THEORY'}), (l:Lab {lab: 'Graph Theory', group: 'B'}), 
+    (r:Room {room:'379'}), (d:Day {day: 'Tuesday'})
     create (l)-[:TopicOf]->(m), (l)-[:Location]->(r), (l)-[:Time {time: '12:00-13:00'}]->(d);
 
-![CreateLab](http://i.imgur.com/5lgcZSg.png)
+![CreateLab](http://i.imgur.com/SK2rV5U.png)
 
 ## Read
 
@@ -25,3 +26,8 @@ Below is an example query of how to match all modules and their respective lectu
 
 ![ReadModulesLecturers](http://i.imgur.com/vCwQc0d.png)
 
+## Update
+
+    $ match (m:Module) where m.module = 'WRONG_NAME' set m.module = 'GRAPH THEORY' return m;
+
+## Delete
