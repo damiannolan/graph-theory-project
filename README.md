@@ -28,3 +28,10 @@ Before moving any further it is advised you are setup and ready to use Neo4j wit
 - Clone this repository
 - Unzip the file - gmit-software-timetable-graphdb.zip
 - Launch Neo4j, select the database location and click start
+
+### References
+
+[GMIT Web Timetables](http://timetable.gmit.ie/)
+[Neo4j - Graph Database](https://neo4j.com/)
+[Tutorials Point](https://www.tutorialspoint.com)
+[Property Graph Model](https://www.packtpub.com/mapt/book/Big-Data-and-Business-Intelligence/9781784393441/1/ch01lvl1sec09/The+property+graph+model)
