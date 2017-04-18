@@ -17,7 +17,7 @@ In light of this we take a look at how one might approach modeling a Third Level
 - [What are Graph Databases and Neo4j?](about-graphdb-and-neo4j)
 - [How is Data Stored?](how-data-is-stored)
 - [GMIT Timetable](gmit-timetable)
-- Querying the Prototype Database
+- [The Prototype Database - CRUD](prototype-database-crud)
 - General Thoughts and Conclusion
 
 ### Prerequisites 

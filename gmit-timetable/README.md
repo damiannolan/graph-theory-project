@@ -20,6 +20,8 @@ Designing and modeling a database schema that worked for this data was perhaps t
 After much trial and wondering what was the best way to store these different pieces of data on the graph, I came up with what I feel like is a decent first draft model for the graph schema. I designed this model with the intension of being able to query certain fragments of the data quick and efficiently with Cypher queries that were not overly complex.
 With this in mind, I chose that it was necessary to have a separate node for every lecture and lab that takes place throughout the week, otherwise it is easy to lose data integrity.
 
+Using the schema below I feel it provides a useful structure of data that makes for simple querying and traversal of nodes using the relationships created between them.
+
 ## Schema
 ### Nodes
 
@@ -50,3 +52,4 @@ I feel its necessary to give a sample size of the graph to portray the schema as
 ## Obtaining the Data
 
 All the data used in the prototype database has been obtained by myself personally from the [GMIT Timetable Site](http://timetable.gmit.ie). To do this I spent a lot of time scraping data by viewing the webpages source code in Chrome and filtering the data in Sublime Text via find and replace with some helpful use of basic regular expressions.
+I then created a helper document which I used for setting up bulk commands for inserting data into the graph.
