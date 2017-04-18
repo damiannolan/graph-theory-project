@@ -18,7 +18,7 @@ In light of this we take a look at how one might approach modeling a Third Level
 - [How is Data Stored?](how-data-is-stored)
 - [GMIT Timetable](gmit-timetable)
 - [The Prototype Database - CRUD](prototype-database-crud)
-- General Thoughts and Conclusion
+- [General Thoughts and Conclusion](conclusion)
 
 ### Prerequisites 
 
