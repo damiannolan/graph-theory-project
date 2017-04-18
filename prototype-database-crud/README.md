@@ -50,3 +50,24 @@ Delete a relationship between a set of nodes
     $ match (l:Lecturer { lecturer: 'Martin Hynes'})-[t:Teaches]-(m:Module { module: 'DATABASE MANAGEMENT'})
     delete t;
 
+## More Complex Queries
+
+When taking advantage of the power of Cypher we can deduce easiliy what times a particular room is occupied
+
+    $ match (m:Module)<-[:TopicOf]-(x)-[:Location]->(r:Room)<-[]-()-[:Time]->(d:Day) 
+    where r.room = '994' return m, r, x, d;
+
+![TimesRooms](http://i.imgur.com/Y3cDEEB.png)
+
+Return a graph of all Lectures/Labs and their locations that take place on a Friday
+
+    $ match (m:Module)<-[:TopicOf]-(x)-[:Time]-(d:Day)-[]-()-[:Location]-(r:Room) where d.day = 'Friday' 
+    return m, x, d, r;
+
+![FridayClasses](http://i.imgur.com/OcG9GT7.png)
+
+By querying the graph for all Years, Modules and their respective Lecturers we can get some interesting results that show us that 1st Year Student have an entirely different set of Lecturers to years 2, 3 and 4.
+
+    $ match (y:Year)-[]->(m:Module)<-[:Teaches]-(l:Lecturer) return y, m, l;
+
+![YearsModulesLecturers](http://i.imgur.com/kXbPrPu.png)
