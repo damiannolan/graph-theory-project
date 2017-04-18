@@ -45,7 +45,7 @@ With this in mind, I chose that it was necessary to have a separate node for eve
 Below is an example of the way in which data is modeled in the graph. The query returns an example of how the entire schema looks and showcases the Graph Theory module's timetable for 3rd year Software Development students.
 I feel its necessary to give a sample size of the graph to portray the schema as returning all nodes and relationships in the database isn't very aesthetically pleasing to the view.
 
-![Imgur](http://i.imgur.com/fQov8xt.png)
+![Schema](http://i.imgur.com/wijPegU.png)
 
 ## Obtaining the Data
 
