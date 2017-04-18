@@ -28,6 +28,25 @@ Below is an example query of how to match all modules and their respective lectu
 
 ## Update
 
+Update a Module node to set its name correctly:
+
     $ match (m:Module) where m.module = 'WRONG_NAME' set m.module = 'GRAPH THEORY' return m;
 
+Update a Relationship property to set its time correctly:
+
+    $ match (l:Lab)-[t:Time]->(d:Day) where l.lab = 'Graph Theory' and l.group = 'B' set t.time = '12:00-13:00'
+    return l, d;
+
+![UpdateExample](http://i.imgur.com/XfgxiGy.png)
+
 ## Delete
+
+Delete a Module node
+
+    $ match (m:Module) where m.module = 'WRONG_NAME' delete m;
+
+Delete a relationship between a set of nodes
+
+    $ match (l:Lecturer { lecturer: 'Martin Hynes'})-[t:Teaches]-(m:Module { module: 'DATABASE MANAGEMENT'})
+    delete t;
+
