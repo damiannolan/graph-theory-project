@@ -52,7 +52,7 @@ Delete a relationship between a set of nodes
 
 ## More Complex Queries
 
-When taking advantage of the power of Cypher we can deduce easiliy what times a particular room is occupied
+When taking advantage of the power of Cypher we can deduce easiliy what times a particular room is occupied and by what Module or Lecture.
 
     $ match (m:Module)<-[:TopicOf]-(x)-[:Location]->(r:Room)<-[]-()-[:Time]->(d:Day) 
     where r.room = '994' return m, r, x, d;
