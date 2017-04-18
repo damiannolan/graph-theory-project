@@ -43,7 +43,7 @@ After much trial and wondering what was the best way to store these different pi
 
 Below is an example of the way in which data is modeled in the graph. The query returns an example of how the entire schema looks and showcases the Graph Theory module's timetable for 3rd year Software Development students.
 
-![alt text](http://imgur.com/a/rL7sv)
+![alt text](http://imgur.com/a/rL7sv.jpg)
 
 ## Obtaining the Data
 
