@@ -18,6 +18,7 @@ To model an accurate representation of the GMIT timetable there is a certain amo
 Designing and modeling a database schema that worked for this data was perhaps the most difficult task, while scraping the data is time consuming it was necessary to put the same amount of time into exploring different designs and models that could work for representing the timetable data in a graph store.
 
 After much trial and wondering what was the best way to store these different pieces of data on the graph, I came up with what I feel like is a decent first draft model for the graph schema. I designed this model with the intension of being able to query certain fragments of the data quick and efficiently with Cypher queries that were not overly complex.
+With this in mind, I chose that it was necessary to have a separate node for every lecture and lab that takes place throughout the week, otherwise it is easy to lose data integrity.
 
 ## Schema
 ### Nodes
@@ -42,6 +43,7 @@ After much trial and wondering what was the best way to store these different pi
 ### Example
 
 Below is an example of the way in which data is modeled in the graph. The query returns an example of how the entire schema looks and showcases the Graph Theory module's timetable for 3rd year Software Development students.
+I feel its necessary to give a sample size of the graph to portray the schema as returning all nodes and relationships in the database isn't very aesthetically pleasing to the view.
 
 ![Imgur](http://i.imgur.com/fQov8xt.png)
 
