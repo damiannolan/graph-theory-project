@@ -13,8 +13,8 @@ Create a node with the label of Lab:
 Associate the Lab with it's respective Module, Room and Time on a particular Day using Relationships:
 
     $ match (m:Module {module: 'GRAPH THEORY'}), (l:Lab {lab: 'Graph Theory', group: 'B'}), 
-    (r:Room {room:'379'}), (d:Day {day: 'Tuesday'})
-    create (l)-[:TopicOf]->(m), (l)-[:Location]->(r), (l)-[:Time {time: '12:00-13:00'}]->(d);
+      (r:Room {room:'379'}), (d:Day {day: 'Tuesday'})
+      create (l)-[:TopicOf]->(m), (l)-[:Location]->(r), (l)-[:Time {time: '12:00-13:00'}]->(d);
 
 ![CreateLab](http://i.imgur.com/SK2rV5U.png)
 
@@ -35,7 +35,7 @@ Update a Module node to set its name correctly:
 Update a Relationship property to set its time correctly:
 
     $ match (l:Lab)-[t:Time]->(d:Day) where l.lab = 'Graph Theory' and l.group = 'B' set t.time = '12:00-13:00'
-    return l, d;
+      return l, d;
 
 ![UpdateExample](http://i.imgur.com/XfgxiGy.png)
 
@@ -48,14 +48,14 @@ Delete a Module node
 Delete a relationship between a set of nodes
 
     $ match (l:Lecturer { lecturer: 'Martin Hynes'})-[t:Teaches]-(m:Module { module: 'DATABASE MANAGEMENT'})
-    delete t;
+      delete t;
 
 ## More Complex Queries
 
 When taking advantage of the power of Cypher we can deduce easiliy what times a particular room is occupied and by what Module or Lecture.
 
     $ match (m:Module)<-[:TopicOf]-(x)-[:Location]->(r:Room)<-[]-()-[:Time]->(d:Day) 
-    where r.room = '994' return m, r, x, d;
+      where r.room = '994' return m, r, x, d;
 
 ![TimesRooms](http://i.imgur.com/Y3cDEEB.png)
 
@@ -64,7 +64,7 @@ ___
 Return a graph of all Lectures/Labs and their locations that take place on a Friday
 
     $ match (m:Module)<-[:TopicOf]-(x)-[:Time]-(d:Day)-[]-()-[:Location]-(r:Room) where d.day = 'Friday' 
-    return m, x, d, r;
+      return m, x, d, r;
 
 ![FridayClasses](http://i.imgur.com/OcG9GT7.png)
 

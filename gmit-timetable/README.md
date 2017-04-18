@@ -47,6 +47,9 @@ Using the schema below I feel it provides a useful structure of data that makes 
 Below is an example of the way in which data is modeled in the graph. The query returns an example of how the entire schema looks and showcases the Graph Theory module's timetable for 3rd year Software Development students.
 I feel its necessary to give a sample size of the graph to portray the schema as returning all nodes and relationships in the database isn't very aesthetically pleasing to the view.
 
+    $ match (c:Course)-[]->(y:year)-[]->(m:Module)<-[]-(l)-[:Teaches|:Location|:Time]->(x)
+      where m.module = 'GRAPH THEORY' return c, y, m, l, x;
+
 ![Schema](http://i.imgur.com/wijPegU.png)
 
 ## Obtaining the Data
