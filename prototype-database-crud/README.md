@@ -59,6 +59,8 @@ When taking advantage of the power of Cypher we can deduce easiliy what times a 
 
 ![TimesRooms](http://i.imgur.com/Y3cDEEB.png)
 
+___
+
 Return a graph of all Lectures/Labs and their locations that take place on a Friday
 
     $ match (m:Module)<-[:TopicOf]-(x)-[:Time]-(d:Day)-[]-()-[:Location]-(r:Room) where d.day = 'Friday' 
@@ -66,8 +68,12 @@ Return a graph of all Lectures/Labs and their locations that take place on a Fri
 
 ![FridayClasses](http://i.imgur.com/OcG9GT7.png)
 
+___
+
 By querying the graph for all Years, Modules and their respective Lecturers we can get some interesting results that show us that 1st Year Student have an entirely different set of Lecturers to years 2, 3 and 4.
 
     $ match (y:Year)-[]->(m:Module)<-[:Teaches]-(l:Lecturer) return y, m, l;
 
 ![YearsModulesLecturers](http://i.imgur.com/kXbPrPu.png)
+
+___
